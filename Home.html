@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PORTFOLIO</title>
+        <link rel = "icon" href = "https://t4.ftcdn.net/jpg/08/18/68/09/360_F_818680922_MWU5mzvItIcogn2sFHbZnu36Xe4VICeA.jpg">
+        <style>
+            *{
+                margin:0px;
+                padding: 0px;
+            }
+            header{
+                padding:  20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: rgb(168, 177, 202);
+                width: 100%;
+                height: 10%;
+                /*position: sticky;
+                overflow: hidden;*/
+            }
+            header h1{
+                padding-left: 2%;
+            }
+            header nav{
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                padding-left: 10%;
+            }
+            header nav a{
+                text-decoration: none;
+                color: black;
+            }
+            header nav a:hover{
+                color: blue;
+                transform: scale(1.05);
+            }
+            main{
+                padding-left: 2%;
+            }
+            #Home{
+                display: flex;
+                padding-top: 5%;
+            }
+            #Home .photo{
+                width: 20%;
+                height: 20%;
+            }
+            #Home .logo{
+                width: 100px;
+                height: 100px;
+            }
+            #Home .logo:hover{
+                transform: scale(1.05);
+            }
+            #Home .photo:hover{
+                transform: scale(1.05);
+            }
+
+            #Home .content{
+                padding-left: 5%;
+            }
+            #Education .education{
+                padding-left: 1%;
+            }
+            #Achievements ol{
+                padding-left: 2%;
+            }
+            .achievement{
+                display:flex;
+                justify-content:space-between;
+            }
+            .styles{
+                border: solid rgba(17, 18, 1, 0.199) 4px ;
+                border-radius: 20px;
+                padding: 20px;
+                margin-left: -1%;
+                margin-top: 1%;
+                margin-right: 1%;
+                background-color: rgba(196, 197, 196, 0.258);
+            }
+            /*.styles:hover{
+                transform: scale(1.01);
+            }*/
+            #Skills .skill{
+                padding-top: 1%;
+                padding-left: 1%;
+            }
+            #Skills .skill ol, #Certifications ul{
+                padding-left: 2%;
+            }
+            #Achievements ol a, #Certifications ul a{
+                text-decoration: none;
+                color: black;
+                border: solid black 2px;
+                border-radius: 5px;
+                padding: 2px;
+                font-size: 12px;
+                background-color: Yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>PORTFOLIO</h1>
+            <nav>
+                <a href = "#Home">HOME</a>
+                <a href = "#Education">EDUCATION</a>
+                <a href = "#Achievements">ACHIEVEMENTS</a>
+                <a href = "#Skills">SKILLS</a>
+                <a href = "#Projects">PROJECTS</a>
+                <a href = "#Certifications">CERTIFICATIONS</a>
+            </nav>
+        </header>
+        <main>
+            <section id = "Home" class = "styles">
+                <img src = "C:\Users\Akhil\Desktop\Its me\Personals\documents1\photo.jpg" class = "photo">
+                <div class = "content">
+                    <h1 style = "font-size: 50px;">Rampelli Akhil</h1>
+                    <p>+91 7794889640</p>
+                    <p>akhilrampelli@gmail.com</p><br>
+                    <a href = "https://www.linkedin.com/in/akhil-rampelli"><img src = "https://www.pagetraffic.com/blog/wp-content/uploads/2022/09/linkedin-blue-icon.png" class = "logo"></a>
+                    <a href = "https://leetcode.com/u/akhilrampelli/"><img src = "https://cdn.iconscout.com/icon/free/png-256/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp" class = "logo"></a>
+                    <a href = "https://github.com/akhil-1066"><img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" class = "logo"></a>
+                    <a href = "https://github.com/akhil-1066"><img src = "https://user-images.githubusercontent.com/17762967/42728663-26ebdb04-87dd-11e8-928f-fb01479a2ce1.png" class = "logo"></a>
+                </div>
+            </section>
+            <section id = "Education" class = "styles">
+                <h1>EDUCATION</h1><br>
+                <div class = "education">
+                    <h3>BACHELOR OF TECHNOLOGY: 2021 - 2025</h3>
+                    <p>Computer Science and Engineering - 9.24 CGPA</p>
+                    <p>SR University, Warangal.</p>
+                </div><br>
+                <div class = "education">
+                    <h3>INTERMEDIATE: 2019 - 2021</h3>
+                    <p>MPC - 918/1000</p>
+                    <p>MPJ Boys Residential College Kamalapur, Hanamkonda.</p>
+                </div><br>
+                <div class = "education">
+                    <h3>10th/ SSC: 2018 - 2019</h3>
+                    <p>8.7 CGPA</p>
+                    <p>TS Model School Mulkanur, Hanamkonda.</p>
+            </section>
+            <section id = "Achievements" class = "styles">
+                <h1>ACHIEVEMENTS</h1><br>
+                <ol>
+                    <li>Till now I have solved around 300+ problems in LeetCode platform - <a>VERIFY</a></li>
+                    <li>Won 2nd prize in Hackathon conducted by SR University - <a>VERIFY</a></li>
+                    <li>Won 3rd prize in Hackathon conducted by SR University - <a>VERIFY</a></li>
+                </ol>
+            </section>
+            <section id = "Skills" class = "styles">
+                <h1>SKILLS</h1>
+                <div class = "skill">
+                    <h2>Programming Skills</h2>
+                    <ol>
+                        <li>C Programming</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>Data Structures</li>
+                        <li>Object Oriented Programming</li>
+                        <li>Designing and Analysis of Algorithms</li>
+                    </ol>
+                </div>
+                <div class = "skill">
+                    <h2>Web Technologies</h2>
+                    <ol>
+                        <li>Hyper Text Markup Language - HTML</li>
+                        <li>Cascading Style Sheets - CSS</li>
+                        <li>JavaScript - JS</li>
+                        <li>Hypertext Preprocessor - PHP</li>
+                    </ol>
+                </div>
+                <div class = "skill">
+                    <h2>Databases</h2>
+                    <ol>
+                        <li>Structured Query Language - SQL</li>
+                    </ol>
+                </div>
+                <div class = "skill">
+                    <h2>Frameworks</h2>
+                    <ol>
+                        <li>DJango</li>
+                    </ol>
+                </div>
+            </section>
+            <section id = "Certifications" class = "styles">
+                <h1>CERTIFICATIONS</h1>
+                <ul>
+                    <li>Database Management Course - <a href = "https://nptel.ac.in/noc/E_Certificate/NPTEL23CS79S3573041810024076">NPTEL</a></li>
+                    <li>Crash course on Python in AI Automation - <a href = "https://coursera.org/verify/DAQEXPUUKXPX">COURSERA</a></li>
+                    <li>Problem Solving Intermediate - <a href = "https://www.hackerrank.com/certificates/iframe/312a3cf5f168">HACKERRANK</a></li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
