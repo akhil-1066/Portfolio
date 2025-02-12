@@ -2,95 +2,141 @@
 <html>
     <head>
         <title>PORTFOLIO</title>
-        <link rel = "icon" href = "https://t4.ftcdn.net/jpg/08/18/68/09/360_F_818680922_MWU5mzvItIcogn2sFHbZnu36Xe4VICeA.jpg">
+        <link rel="icon" href="https://t4.ftcdn.net/jpg/08/18/68/09/360_F_818680922_MWU5mzvItIcogn2sFHbZnu36Xe4VICeA.jpg">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
-            *{
-                margin:0px;
+            * {
+                margin: 0px;
                 padding: 0px;
+                box-sizing: border-box;
             }
-            header{
-                padding:  20px;
+            header {
+                padding: 20px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 background-color: rgb(168, 177, 202);
                 width: 100%;
-                height: 10%;
-                /*position: sticky;
-                overflow: hidden;*/
+                height: auto;
+                position: fixed;
+                margin-top: -1vh;
+                z-index: 1000;
             }
-            header h1{
+            header h1 {
                 padding-left: 2%;
+                font-size: 24px;
             }
-            header nav{
+            header nav {
                 display: flex;
                 justify-content: space-around;
                 width: 100%;
                 padding-left: 10%;
             }
-            header nav a{
+            header nav a {
                 text-decoration: none;
                 color: black;
+                font-size: 18px;
             }
-            header nav a:hover{
+            header nav a:hover {
                 color: blue;
                 transform: scale(1.05);
             }
-            main{
-                padding-left: 2%;
+            .break{
+                display: none;
             }
-            #Home{
+            .Heading{
+                display: block;
+            }
+            main {
+                padding-left: 2%;
+                z-index: -1;
+                padding-top: 8vh;
+            }
+            #Home {
                 display: flex;
+                flex-wrap: wrap;
                 padding-top: 5%;
             }
-            #Home .photo{
-                width: 20%;
-                height: 20%;
+            #Home .logo {
+                width: 150px;
+                height: 120px;
+                transition: transform 0.3s;
             }
-            #Home .logo{
-                width: 100px;
-                height: 100px;
+            .name{
+                font-size: 50px;
             }
-            #Home .logo:hover{
-                transform: scale(1.05);
+            .photo{
+                height: 60vh;
+                width: 60vh;
             }
-            #Home .photo:hover{
-                transform: scale(1.05);
+            #Home .logo:hover {
+                transform: translateY(-5px);
             }
-
-            #Home .content{
+            #Home .photo:hover {
+                transform: scale(1.01);
+            }
+            #Home .content {
                 padding-left: 5%;
             }
-            #Education .education{
+            #Education .education {
                 padding-left: 1%;
             }
-            #Achievements ol{
+            #Achievements ol {
                 padding-left: 2%;
             }
-            .achievement{
-                display:flex;
-                justify-content:space-between;
+            .achievement {
+                display: flex;
+                justify-content: space-between;
             }
-            .styles{
-                border: solid rgba(17, 18, 1, 0.199) 4px ;
+            .styles {
+                border: solid rgba(17, 18, 1, 0.199) 4px;
                 border-radius: 20px;
                 padding: 20px;
                 margin-left: -1%;
                 margin-top: 1%;
                 margin-right: 1%;
                 background-color: rgba(196, 197, 196, 0.258);
+                width: 100%;
             }
-            /*.styles:hover{
-                transform: scale(1.01);
-            }*/
-            #Skills .skill{
-                padding-top: 1%;
-                padding-left: 1%;
+            #Home{
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                /*background: linear-gradient(135deg, #2ecc71, #3498db);*/
+                padding: 2rem;
             }
-            #Skills .skill ol, #Certifications ul, #Projects ul{
+            #Skills .skill {
+                /*padding-top: 1%;
+                padding-left: 1%;*/
+                display:flex;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+                padding: 2vh;
+            }
+            #Skills .skill div{
+                width: 30vh;
+                padding-top: 2vh;
+            }
+            #Skills .skill img{
+                width: 28vh;
+                height: 30vh;
+                transition: transform 0.3s;
+            }
+            #Skills .skill img:hover{
+                transform: translateY(-5px);
+            }
+            #Skills .skill p{
+                text-align: center;
+            }
+            #Skills h2{
+                padding-top: 2vh;
+            }
+            #Skills .skill ol, #Certifications ul, #Projects ul {
                 padding-left: 2%;
             }
-            #Achievements ol a, #Certifications ul a{
+            #Achievements ol a, #Certifications ul a {
                 text-decoration: none;
                 color: black;
                 border: solid black 2px;
@@ -99,118 +145,466 @@
                 font-size: 12px;
                 background-color: Yellow;
             }
-            footer{
-                margin-top: 10px;
+            .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        .grid{
+            display: flex;
+            justify-content: space-around;
+        }
+        .achivement{
+            width: 80vh;
+            height: 50vh;
+            border: solid rgb(104, 96, 96) 3px;
+            border-radius: 3vh;
+            text-align: center;
+            align-items: center;
+            padding-top: 2vh;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .achivement:hover{
+            transform: translateY(-5px);
+        }
+        .certificate{
+            width: 60vh;
+            height: 40vh;
+            border: solid rgb(104, 96, 96) 3px;
+            border-radius: 3vh;
+            text-align: center;
+            align-items: center;
+            padding-top: 1vh;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .certificate:hover{
+            transform: translateY(-5px);
+        }
+        #Projects .grid .Project{
+            border: solid rgb(167, 155, 155) 2px;
+            width: 65vh;
+            height: 60vh;
+            border-radius: 3vh;
+            background-color: rgb(244, 235, 235);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+        #Projects .grid .Project img{
+            width: 65vh;
+            height: 30vh;
+        }
+        #Projects .grid .Project h3, #Projects .grid .Project h4{
+            color: white;
+            padding-left: 2vh;
+        }
+        #Projects .grid .Project ul{
+            padding-left: 4vh;
+            color: white;
+        }
+        #Projects .grid .Project .Decription{
+            padding-top: 1.5vh;
+            background-color: rgb(73, 57, 57);
+            height: 101%;
+        }
+        .Project:hover {
+            transform: translateY(-5px);
+        }
+        .Education{
+            width: 60vh;
+            height: 55vh;
+            border: solid black 2px;
+            border-radius: 3vh;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .Edu-details{
+            padding-top: 1vh;
+            text-align: center;
+            background-color: black;
+            color: white;
+            height: 101%;
+        }
+        .Education:hover{
+            transform: translateY(-10px);
+        }
+        .Education img{
+            width: 60vh;
+            height: 40vh;
+            background-color: white;
+        }
+        .Heading a{
+            display: none;
+        }
+        /* Media Queries for Mobile View */
+        @media only screen and (max-width: 768px) {
+            .Heading{
+                display: flex;
+                padding-top: 2vh;
+                height: 8vh;
             }
-        </style>
+            .Heading a{
+                display: block;
+                position: absolute;
+                right: 10px;
+            }
+            .break{
+                display: block;
+            }
+            main{
+                padding-top: 10%;
+                margin: auto;
+                height: auto;
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 10px;
+                position: fixed;
+            }
+            header h1 {
+                font-size: 20px;
+                padding-left: 0;
+            }
+            header nav {
+                flex-direction: column;
+                padding-left: 0;
+                overflow: hidden;
+                /*background-color: #333;*/
+                position: relative;
+            }
+            #links{
+                display: none;
+                padding-left: 2vh;
+            }
+            header nav a {
+                font-size: 16px;
+                padding: 5px 0;
+            }
+            header a .icon {
+                background: black;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            #Home {
+                flex-direction: column;
+		        height: 100%;
+                align-items: center;
+                padding-top: 1%;
+            }
+            .name{
+                font-size: 30px;
+            }
+            #Home .photo {
+                width: 80%;
+                height: auto;
+            }
+            #Home .content {
+                padding-left: 0;
+                text-align: center;
+            }
+            #Home .logo {
+                width: 20%;
+                height: 20%;
+            }
+            .grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .Education, .achivement, .certificate, #Projects .grid .Project {
+                width: 90%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+            .Education img, #Projects .grid .Project img {
+                width: 100%;
+                height: auto;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            #Skills .skill {
+		        width: 100%;
+		        /*flex-direction: column;*/
+                align-items: center;
+            }
+	        #Skills .skill p{
+		        display: none;}
+            #Skills .skill div {
+                width: 70%;
+		        height: 50%;
+                text-align: center;
+            }
+            #Skills .skill img {
+                width: 100%;
+		        height: 100%;
+                height: auto;
+            }
+        }
+    </style>
     </head>
     <body>
-        <header>
-            <h1>PORTFOLIO</h1>
-            <nav>
-                <a href = "#Home">PROFILE</a>
-                <a href = "#Education">EDUCATION</a>
-                <a href = "#Achievements">ACHIEVEMENTS</a>
-                <a href = "#Skills">SKILLS</a>
-                <a href = "#Projects">PROJECTS</a>
-                <a href = "#Certifications">CERTIFICATIONS</a>
+        <header id = "navbar">
+            <div class = "Heading">
+                <h1>PORTFOLIO</h1>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav id = "links">
+                <a href="#Home">HOME</a><br class = "break">
+                <a href="#Education">EDUCATION</a><br class = "break">
+                <a href="#Achievements">ACHIEVEMENTS</a><br class = "break">
+                <a href="#Skills">SKILLS</a><br class = "break">
+                <a href="#Projects">PROJECTS</a><br class = "break">
+                <a href="#Certifications">CERTIFICATIONS</a>
             </nav>
         </header>
         <main>
-            <section id = "Home" class = "styles">
-                <img src = "https://akhil-1066.github.io/Portfolio/photo.jpg" class = "photo">
-                <div class = "content">
-                    <h1 style = "font-size: 50px;">Rampelli Akhil</h1>
+            <section id="Home" class="styles">
+                <img src="https://akhil-1066.github.io/Portfolio/photo.jpg" class="photo">
+                <div class="content">
+                    <h1 class = "name">Rampelli Akhil</h1>
                     <p>+91 7794889640</p>
                     <p>akhilrampelli@gmail.com</p><br>
-                    <a href = "https://www.linkedin.com/in/akhil-rampelli"><img src = "https://www.pagetraffic.com/blog/wp-content/uploads/2022/09/linkedin-blue-icon.png" class = "logo"></a>
-                    <a href = "https://leetcode.com/u/akhilrampelli/"><img src = "https://cdn.iconscout.com/icon/free/png-256/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp" class = "logo"></a>
-                    <a href = "https://github.com/akhil-1066"><img src = "https://cdn-icons-png.flaticon.com/512/25/25231.png" class = "logo"></a>
-                    <a href = "https://github.com/akhil-1066"><img src = "https://user-images.githubusercontent.com/17762967/42728663-26ebdb04-87dd-11e8-928f-fb01479a2ce1.png" class = "logo"></a>
+                    <a href="https://www.linkedin.com/in/akhil-rampelli"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png" class="logo"></a>
+                    <a href="https://leetcode.com/u/akhilrampelli/"><img src="https://cdn.iconscout.com/icon/free/png-256/free-leetcode-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-4-pack-logos-icons-2944960.png?f=webp" class="logo"></a>
+                    <a href="https://github.com/akhil-1066"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="logo"></a>
+                    <a href="https://github.com/akhil-1066"><img src="https://user-images.githubusercontent.com/17762967/42728663-26ebdb04-87dd-11e8-928f-fb01479a2ce1.png" class="logo"></a>
                 </div>
             </section>
-            <section id = "Education" class = "styles">
-                <h1>EDUCATION</h1><br>
-                <div class = "education">
-                    <h3>BACHELOR OF TECHNOLOGY: 2021 - 2025</h3>
-                    <p>Computer Science and Engineering - 9.24 CGPA</p>
-                    <p>SR University, Warangal.</p>
-                </div><br>
-                <div class = "education">
-                    <h3>INTERMEDIATE: 2019 - 2021</h3>
-                    <p>MPC - 918/1000</p>
-                    <p>MPJ Boys Residential College Kamalapur, Hanamkonda.</p>
-                </div><br>
-                <div class = "education">
-                    <h3>10th/ SSC: 2018 - 2019</h3>
-                    <p>8.7 CGPA</p>
-                    <p>TS Model School Mulkanur, Hanamkonda.</p>
+            <section id="Education" class="styles">
+                <h1 class = "section-title">EDUCATION</h1><br>
+                <div class = "grid">
+                    <div class = "Education">
+                        <img src = "https://media.licdn.com/dms/image/v2/D560BAQHFwxbLnbdOXw/company-logo_200_200/company-logo_200_200/0/1722660564365/sr_university_logo?e=2147483647&v=beta&t=k0liGQhCwH_9kyWoQkrzyjGtp1QIgmrT7sgLC442x5c">
+                        <div class = "Edu-details">
+                            <h2>Bachelor of Technology (2021 - 2025)</h2>
+                            <h3>Computer Science and Engineering - 9.15/10</h3>
+                            <p>SR University, Warangal - 506371</p>
+                        </div>
+                    </div>
+                    <div class = "Education">
+                        <img src = "https://tgmjpbcwreishrms.cgg.gov.in/images/MJPTLogonew.jpg">
+                        <div class = "Edu-details">
+                            <h2>Intermediate (2019 - 2021)</h2>
+                            <h3>MPC - 918/1000</h3>
+                            <p>MJPTBC Welfare Residential Junior College, Kamalapur</p>
+                        </div>
+                    </div>
+                    <div class = "Education">
+                        <img src = "https://tsmsbheemadevarapally.governmentschools.org/wp-content/uploads/2020/09/cropped-model_school_logo-removebg-preview.png">
+                        <div class = "Edu-details">
+                            <h2>SSC (2018 - 2019)</h2>
+                            <h3>10th - 8.17/10</h3>
+                            <p>TS Model School Mulkanur</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id = "Achievements" class = "styles">
-                <h1>ACHIEVEMENTS</h1><br>
-                <ol>
-                    <li>Till now I have solved around 300+ problems in LeetCode platform - <a href = "https://leetcode.com/u/akhilrampelli/">VERIFY</a></li>
-                    <li>Won 3rd prize in Hackathon conducted by SR University - <a href = "https://www.linkedin.com/posts/akhil-rampelli_sru-sruniversity-btech-activity-7154786190821400576-Jf7w?utm_source=share&utm_medium=member_desktop">VERIFY</a></li>
-                </ol>
+            <section id="Projects" class="styles">
+                <h1 class = "section-title">PROJECTS</h1>
+                <div class = "grid">
+                    <div class = "Project">
+                        <img src = "C:\Users\Akhil\Downloads\Ecommerce.png">
+                        <div class = "Decription">
+                            <h3>E-COMMERCE</h3>
+                            <h4>Mentor by prof. Ravi Chaytanya</h4>
+                            <ul>
+                                <li>Built a web Application, handling the front-end Interface.</li>
+                                <li>Optimized front-end elements of the web application which elevated session durations and contributed to a marked improvement in overall usability.</li>
+                                <li>Tools & Technologies: HTML, CSS, JavaScript.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class = "Project">
+                        <img src = "https://i0.wp.com/ubiai.tools/wp-content/uploads/2023/10/1RjZe7cfnhdRhhLimLvapow.png?fit=895%2C470&ssl=1">
+                        <div class = "Decription">
+                            <h3>MIRCHI BREED CLASSIFICATION</h3>
+                            <h4>Supervised by Prof. Naresh Kumar</h4>
+                            <ul>
+                                <li>Trained a sophisticated CNN model using curated image datasets for superior breed identification in mirchi crops, achieved successful classifications within an average processing time.</li>
+                                <li>Breed is classified based on Size, shape, colour, and texture.</li>
+                                <li><b>Tools & Technologies:</b> Python.</li>
+                                <li><b>Libraries:</b> TensorFlow, Keras, PyTorch.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class = "Project">
+                        <img src = "https://icon.cm-static.com/crop_monitoring/Group_2_1.jpg">
+                        <div class = "Decription">
+                            <h3>CROP MONITORING</h3>
+                            <h4>Advised by Prof. Sandeep</h4>
+                            <ul>
+                                <li>Developed a web application for monitoring the Crops. We proposed this project in Hackathon 2023.</li>
+                                <li>Project allows farmers to take proactive measures to optimize crop health and yield by providing real-time insights and recommendations.</li>
+                                <li>Tools & Technologies: HTML, CSS, JavaScript, Python, CNN Model.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section id = "Skills" class = "styles">
-                <h1>SKILLS</h1>
+            <section id="Achievements" class="styles">
+                <h1 class = "section-title">ACHIEVEMENTS</h1><br>
+                <div class = "grid">
+                    <div class = "achivement">
+                        <img src = "C:\Users\Akhil\Downloads\Leetcode.png" style = "width: 95%; height: 90%;">
+                        <p>Till now I have solved around 350+ problems in LeetCode platform - <a href="https://leetcode.com/u/akhilrampelli/">VERIFY</a></p>
+                    </div>
+                    <div class = "achivement">
+                        <img src = "C:\Users\Akhil\Downloads\Hackathon.png" style = "width: 95%; height: 90%;">
+                        <p>Won 3nd prize in Hackathon conducted by SR University - <a href="https://www.linkedin.com/posts/akhil-rampelli_sru-sruniversity-btech-activity-7154786190821400576-Jf7w?utm_source=share&utm_medium=member_desktop">VERIFY</a></p>
+                    </div>
+                </div>
+            </section>
+            <section id="Skills" class="styles">
+                <h1 class = "section-title">SKILLS</h1>
+                <h2>Programming Skills</h2>
+                <div class="skill">
+                    <div>
+                        <img src = "https://img.icons8.com/?size=160&id=mfkStOwP4EC0&format=png">
+                        <p>C Programming</p>
+                    </div>
+                    <div>
+                        <img src = "https://logos-world.net/wp-content/uploads/2022/07/Java-Logo.png">
+                        <p>Java</p>
+                    </div>
+                    <div>
+                        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png">
+                        <p>Python</p>
+                    </div>
+                </div>
+                <h2>Computer Science Fundamentals</h2>
                 <div class = "skill">
-                    <h2>Programming Skills</h2>
-                    <ol>
-                        <li>C Programming</li>
-                        <li>Java</li>
-                        <li>Python</li>
-                        <li>Data Structures</li>
-                        <li>Object Oriented Programming</li>
-                        <li>Designing and Analysis of Algorithms</li>
-                    </ol>
+                    <div>
+                        <img src = "https://miro.medium.com/v2/resize:fit:350/0*xmecyKNlbZKinBDs.png">
+                        <p>Data Structures</p>
+                    </div>
+                    <div>
+                        <img src = "https://cdn4.iconfinder.com/data/icons/technology-83/1000/object_programming_development_oriented_developer_object-oriented_programming_software-512.png">
+                        <p>Object Oriented Programming</p>
+                    </div>
+                    <div>
+                        <img src = "https://media.licdn.com/dms/image/v2/D4E12AQGY3JDisTX-0A/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1715863544120?e=2147483647&v=beta&t=z6c4SafKhZAfHOtJ_1ldfmo27-dNY-7ie2xth796tX0">
+                        <p>Design and Analysis of Algorithms</p>
+                    </div>
+                    <div>
+                        <img src = "https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png">
+                        <p>MySQL</p>
+                    </div>
                 </div>
-                <div class = "skill">
-                    <h2>Web Technologies</h2>
-                    <ol>
-                        <li>Hyper Text Markup Language - HTML</li>
-                        <li>Cascading Style Sheets - CSS</li>
-                        <li>JavaScript - JS</li>
-                        <li>Hypertext Preprocessor - PHP</li>
-                    </ol>
+                <h2>Web Technologies</h2>
+                <div class="skill">
+                    <div>
+                        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png">
+                        <p>Hypertext Markup Language</p>
+                    </div>
+                    <div>
+                        <img src = "https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png">
+                        <p>Cascading Style Sheets</p>
+                    </div>
+                    <div>
+                        <img src = "https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Logo.png">
+                        <p>JavaScript</p>
+                    </div>
+                    <div>
+                        <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png">
+                        <p>Hypertext Preprocessor</p>
+                    </div>
                 </div>
-                <div class = "skill">
-                    <h2>Databases</h2>
-                    <ol>
-                        <li>Structured Query Language - SQL</li>
-                    </ol>
-                </div>
-                <div class = "skill">
-                    <h2>Frameworks</h2>
-                    <ol>
-                        <li>DJango</li>
-                    </ol>
+                <h2>Frameworks</h2>
+                <div class="skill">
+                    <div>
+                        <img src = "https://i0.wp.com/blog.knoldus.com/wp-content/uploads/2020/06/python-django.png?fit=2400%2C800&ssl=1">
+                        <p>django</p>
+                    </div>
                 </div>
             </section>
-            <section id = "Certifications" class = "styles">
-                <h1>CERTIFICATIONS</h1><br>
-                <ul>
-                    <li>Database Management Course - <a href = "https://nptel.ac.in/noc/E_Certificate/NPTEL23CS79S3573041810024076">NPTEL</a></li>
-                    <li>Crash course on Python in AI Automation - <a href = "https://coursera.org/verify/DAQEXPUUKXPX">COURSERA</a></li>
-                    <li>Problem Solving Intermediate - <a href = "https://www.hackerrank.com/certificates/iframe/312a3cf5f168">HACKERRANK</a></li>
-                </ul>
-            </section>
-            <section id = "Projects" class = "styles">
-                <h1>PROJECTS</h1><br>
-                <ul>
-                    <li>"E-COMMERCE WEBSITE" Project in Human Computer Interaction course using HTML, CSS and Java script. And it is a Frontend Development Project. From this I have gained how to built a web Interface in a attractive manner and Interactive way.</li>
-                    <li>Mirchi Breed Classification Project using Machine Learning Model (CNN). This project is trained by using Convolutional Neural Network Machine Learning Model to preprocess the Images, We have researched and collected image dataset.</li>
-                    <li>"CROP MONITORING" Project in Hackathon 2022. This project was a team work. In this, my role is Frontend Developer and the technologies I have used are HTML, CSS, JavaScript. By presenting this project we got Certification of Appreciation from our University.</li>
-                    <li>"BUS TICKET MANAGEMENT SYSTEM" Project in C programming. This is my first project and I have done this project using C Language with File Management System. And this is a individual project.</li>
-                </ul>
+            <section id="Certifications" class="styles">
+                <h1 class = "section-title">CERTIFICATIONS</h1>
+                <div class = "grid">
+                    <div class = "certificate">
+                        <img src = "C:\Users\Akhil\Downloads\NPTEL.png" style = "width: 95%; height: 90%;">
+                        <p>Database Management Course - <a href="https://nptel.ac.in/noc/E_Certificate/NPTEL23CS79S3573041810024076">NPTEL</a></p>
+                    </div>
+                    <div class = "certificate">
+                        <img src = "C:\Users\Akhil\Downloads\Coursera.png" style = "width: 95%; height: 90%;">
+                        <p>Crash course on Python in AI Automation - <a href="https://coursera.org/verify/DAQEXPUUKXPX">COURSERA</a></p>
+                    </div>
+                    <div class = "certificate">
+                        <img src = "C:\Users\Akhil\Downloads\Hackerrank.png" style = "width: 95%; height: 90%;">
+                        <p>Problem Solving Intermediate - <a href="https://www.hackerrank.com/certificates/iframe/312a3cf5f168">HACKERRANK</a></p>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
-            <div style="text-align:center; padding: 20px; background-color: rgb(168, 177, 202);">
-                <p>&copy; 2024 Rampelli Akhil. All rights reserved.</p>
-                <p>Connect with me: <a href="https://www.linkedin.com/in/akhil-rampelli">LinkedIn</a> | <a href="https://github.com/akhil-1066">GitHub</a></p>
-            </div>
         </footer>
+        <script>
+            function myFunction() {
+                var x = document.getElementById("links");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+            // Function to check if the device is a mobile device
+            function isMobileDevice() {
+                return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            }
+
+            // Only run the hover functionality if it's NOT a mobile device
+            /*if (!isMobileDevice()) {
+                document.addEventListener("mousemove", function(event) {
+                    const navbar = document.getElementById("navbar");
+                    // Show the navbar when the mouse is near the top of the page
+                    if (event.clientY < 50) {
+                        navbar.style.top = "0";
+                    } else {
+                        navbar.style.top = "-50px";
+                    }
+                });
+            }*/
+            let lastScrollTop = 0; // Variable to store the last scroll position
+            window.addEventListener("scroll", function() {
+                const navbar = document.getElementById("navbar");
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    
+                var x = document.getElementById("links");
+                    navbar.style.top = "-60px";
+                     // Hide the navbar (adjust height as needed)
+                } else {
+                    // Scrolling up
+                    navbar.style.top = "0";
+                     // Show the navbar
+                }
+
+                lastScrollTop = scrollTop; // Update the last scroll position
+            });
+            /*let lastScrollTop = 0; // Variable to store the last scroll position
+            window.addEventListener("scroll", function() {
+                const navbar = document.getElementById("navbar");
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    navbar.style.display = "none"; // Hide the navbar (adjust height as needed)
+                } else {
+                    // Scrolling up
+                    navbar.style.display = "block"; // Show the navbar
+                }
+
+                lastScrollTop = scrollTop; // Update the last scroll position
+            });*/
+        </script>
     </body>
 </html>
