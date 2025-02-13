@@ -627,11 +627,11 @@
 	        document.addEventListener('keydown', function(event) {
 	            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
 	            if (event.key === 'F12' || 
-	                (event.ctrlKey && event.shiftKey && event.key === 'I') || 
-	                (event.ctrlKey && event.shiftKey && event.key === 'J') || 
-	                (event.ctrlKey && event.key === 'U')) {
-	                event.preventDefault();
-	            }
+			(event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'i')) || 
+			(event.ctrlKey && event.shiftKey && (event.key === 'J' || event.key === 'j')) || 
+			(event.ctrlKey && (event.key === 'U' || event.key === 'u'))) {
+			event.preventDefault();
+            		}
 	        });
         </script>
     </body>
