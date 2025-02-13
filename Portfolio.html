@@ -617,6 +617,22 @@
 
                 lastScrollTop = scrollTop; // Update the last scroll position
             });*/
+
+		// Disable right-click
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+
+        // Disable keyboard shortcuts for opening developer tools
+	        document.addEventListener('keydown', function(event) {
+	            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+	            if (event.key === 'F12' || 
+	                (event.ctrlKey && event.shiftKey && event.key === 'I') || 
+	                (event.ctrlKey && event.shiftKey && event.key === 'J') || 
+	                (event.ctrlKey && event.key === 'U')) {
+	                event.preventDefault();
+	            }
+	        });
         </script>
     </body>
 </html>
